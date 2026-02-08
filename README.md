@@ -1,1 +1,1 @@
-# plugins-mcpb
+# plugins
