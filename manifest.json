@@ -22,10 +22,16 @@
     { "name": "plugins__search", "description": "Search the plugin registry for agents, personas, commands, tools, snippets, and packs" },
     { "name": "plugins__resolve", "description": "Resolve a plugin reference to its manifest and content" }
   ],
+  "compatibility": {
+    "platforms": ["darwin", "linux", "win32"]
+  },
   "_meta": {
     "store.tool.mcpb": {
       "scripts": {
         "build": "cargo build --release"
+      },
+      "compatibility": {
+        "platforms": ["darwin-arm64", "darwin-x86_64", "linux-arm64", "linux-x86_64", "win32-arm64", "win32-x86_64"]
       },
       "static_responses": {
         "tools/list": {
