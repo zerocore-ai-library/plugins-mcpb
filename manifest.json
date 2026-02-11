@@ -20,11 +20,11 @@
   },
   "tools": [
     {
-      "name": "plugins__search",
+      "name": "search",
       "description": "Search the plugin registry for agents, personas, commands, tools, snippets, and packs"
     },
     {
-      "name": "plugins__resolve",
+      "name": "resolve",
       "description": "Resolve a plugin reference to its manifest and content"
     }
   ],
@@ -37,8 +37,10 @@
   },
   "_meta": {
     "store.tool.mcpb": {
+      "runtime": "rust",
+      "categories": ["development", "integrations"],
       "scripts": {
-        "build": "cargo build --release"
+        "build": "cargo build --release && mkdir -p dist && cp target/release/plugins dist/"
       },
       "compatibility": {
         "platforms": [
@@ -54,7 +56,7 @@
         "tools/list": {
           "tools": [
             {
-              "name": "plugins__search",
+              "name": "search",
               "description": "Search the plugin registry for agents, personas, commands, tools, snippets, and packs.",
               "input_schema": {
                 "type": "object",
@@ -142,7 +144,7 @@
               }
             },
             {
-              "name": "plugins__resolve",
+              "name": "resolve",
               "description": "Resolve a plugin reference to its manifest and content. Supports local plugins and registry fallback.",
               "input_schema": {
                 "type": "object",
