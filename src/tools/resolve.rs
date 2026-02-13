@@ -1,4 +1,4 @@
-//! plugins__resolve tool implementation.
+//! resolve tool implementation.
 
 use radical_core::resolver::{FilePluginResolver, RegistryClient};
 use rmcp::handler::server::wrapper::Parameters;

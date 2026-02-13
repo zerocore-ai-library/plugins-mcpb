@@ -1,4 +1,4 @@
-//! plugins__search tool implementation.
+//! search tool implementation.
 
 use rmcp::handler::server::wrapper::Parameters;
 use rmcp::{ErrorData as McpError, Json};
